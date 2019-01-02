@@ -1,10 +1,10 @@
 \documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ...
 %\geometry{landscape}                		% Activate for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+								% TeX will automatically convert eps --> pdf in pdflatex
 \usepackage{amssymb}
 
 \usepackage{listings}
@@ -23,7 +23,7 @@
 %SetFonts
 
 
-\title{System Design Technical Review}
+\title{Technical Review}
 \author{junyan.xu\footnote{junyan.xu@jpmorgan.com}}
 %\date{}							% Activate to display a given date or no date
 
@@ -38,7 +38,7 @@
 Solid principles are the most basic principles in system design
 
 \subsection{Single Responsible principle}
-Suppose you are going to design two classes, \textit{ractangle} and \textit{triangle}. 
+Suppose you are going to design two classes, \textit{ractangle} and \textit{triangle}.
 
 \begin{lstlisting}
 class shape{
@@ -70,7 +70,7 @@ struct getSize(const shape* s, const string& format){
 }
 \end{lstlisting}
 
-However, this is not a good design since it violate the single responsibility principle. Since now getSize is not only calculate the size, but also in charge of formatting the output. 
+However, this is not a good design since it violate the single responsibility principle. Since now getSize is not only calculate the size, but also in charge of formatting the output.
 Which add extra interconnection and logic to the code. So we need to refactor the code into following
 \begin{lstlisting}
 struct summary{
@@ -94,8 +94,8 @@ The single responsible principle tell us to write a function only for a single p
 Inside the get size function, a short cut. We can write the function with bunch of if-else:
 \begin{lstlisting}
 struct getSize(const shape* s){
-	
-	// dynamic_cast here can check the actual type safely 
+
+	// dynamic_cast here can check the actual type safely
 	// at the run time
 
 	if ( dynamic_cast<rectangle*>( s ) )
@@ -106,7 +106,7 @@ struct getSize(const shape* s){
 	}
 }
 \end{lstlisting}
-The function above is not a good way of code because it violate the open/close principle. If you have another class circle, then you will 
+The function above is not a good way of code because it violate the open/close principle. If you have another class circle, then you will
 have to \textbf{modify} the function method. \textbf{open} in the principle means open for extension (add more method) while \textbf{close} here means
 close for modification of the old method.
 \begin{lstlisting}
@@ -115,7 +115,7 @@ class circle: shape {
 };
 
 int getSize(const shape* s){
-	
+
 	if ( dynamic_cast<rectangle*>( s ) ){
 	}
 	else if ( dynamic_cast<triangle*>( s ) )
@@ -151,7 +151,7 @@ class circle: shape {
 };
 
 int getSize(const shape* s){
-	
+
 	return s->getSize();
 }
 \end{lstlisting}
@@ -174,7 +174,7 @@ public:
 private:
 }
 \end{lstlisting}
-Some people would say it is a good design. But, to Liskov principle tell us that the child class must provide everything that parent class method. Think about 
+Some people would say it is a good design. But, to Liskov principle tell us that the child class must provide everything that parent class method. Think about
 if our eclipse class have a method \textbf{stretch}
 \begin{lstlisting}
 class eclipse{
@@ -189,7 +189,7 @@ public:
 Then our circle must have this method too. However, circle cannot have this method. So here are two possible solutions:
 \begin{itemize}
   \item throw exception or return failure value in circle stretch method
-  \item redefine the data model, add another common base class "shape" to both of it. Now circle vs eclipse is D vs D (Derived vs Derived) 
+  \item redefine the data model, add another common base class "shape" to both of it. Now circle vs eclipse is D vs D (Derived vs Derived)
 \end{itemize}
 
 \subsection{Interface Segregation Principle}
@@ -229,7 +229,7 @@ private:
 
 class FlatShape: BaseShape{
 /*
-	segregate the getVolume and getSize into two branch 
+	segregate the getVolume and getSize into two branch
 */
 	virtual int getSize const(){
 	}
@@ -253,8 +253,8 @@ class cubic: SolidShape {
 
 \subsection{Dependency Inversion Principle}
 
-This is the easiest of five. The higher level function should only rely on the lower level abstractions but not the detailed implementation.  
-The bridge pattern, abstract factory pattern are good example. Here the high-level user paint depend on the abstraction of different Painter, 
+This is the easiest of five. The higher level function should only rely on the lower level abstractions but not the detailed implementation.
+The bridge pattern, abstract factory pattern are good example. Here the high-level user paint depend on the abstraction of different Painter,
 no matter how painter is changed. The rectangle can always get the updated result.
 
 Adding abstraction dependency is called dependency injection.
@@ -274,20 +274,20 @@ public:
 
 class rectangle: shape{
 
-// high level user rectangle only need to know we have a member 
-// which is in charge of paint. That's it, no more info that high-level 
+// high level user rectangle only need to know we have a member
+// which is in charge of paint. That's it, no more info that high-level
 // user need to know.
 
 public:
 	rectangle(float x, float y, Painter * pt): width(x), width(y), pt(pt){
 		// add Painter* here is actually called dependency injection
 	}
-	
+
 	void paint(){
 		pt.paint();
 	}
 private:
-	Painter pt;	
+	Painter pt;
 };
 
 \end{lstlisting}
@@ -296,5 +296,4 @@ private:
 \section{Management Type Object Design}
 \section{Reservation Type Object Design}
 \section{Card Game Type Object Design}
-
-\end{document}  
+\end{document}

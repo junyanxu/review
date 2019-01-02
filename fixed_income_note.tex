@@ -1,0 +1,73 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+\usepackage{mystyle}
+
+\title{Fixed Income Review}
+\author{junyan.xu\footnote{junyan.xu@jpmorgan.com}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Forward Measure}
+
+\subsection{Intuitive Definition}
+
+To start with, recall in the HJM framework we have the discount value of a bond price is a martingale in risk neutral measure. This is true
+because any tradeable assets must be a martingale in risk neutral measure otherwise you have arbitrage oppurtunity
+
+\begin{equation}
+  d(D(t)B(t, T)) = -\sigma^{\ast}D(t)B(t, T)d\widetilde{W}(t)
+\end{equation}
+
+Then recall the definition of the fundamental theorem that there exists a measure between two tradeable assets that those two can form a martingale.
+
+If we further assume the measure is at time T, which is the same expiration time of the zero-coupon bonds, then we have:
+
+\begin{equation}
+  \frac{V(t)}{B(0, T)} = E^{T}\frac{V(T)}{B(T, T)} = E^{T}V(T) 
+\end{equation}
+
+\begin{equation}
+  V(t) = B(0, T)E^{T}V(T) 
+\end{equation}
+
+The idea behind this is that, we cannot find a way using bond to hedge our payoff then get money at any condition. Recall the similar risk neutral
+pricing formula for any contract. But first, think of risk neutral measure as a measure that you can find a martingale such that it prevents you from being using
+bank account to make arbitrage
+
+\begin{equation}
+  V(t) = E^{B}(V(T)D(T))
+\end{equation}
+
+
+Since T, B measures are both defined on same event space. The we can naturally get the transformation of the probability on same event to be
+
+\begin{equation}
+  \widetilde{P}^{T}(A) = \frac{1}{B(0, T)} \int_A D(T) d\widetilde{P}^B(A)
+\end{equation}
+
+
+\subsection{Link To Risk Neutral Measure}
+\subsubsection{Non-Model Based}
+
+We often hear someone say {\color{red}\textit{forward price is martingale under T measure}}. Firstly, without proof, this statement can be think of as:
+\begin{itemize}
+\item First forward price is the number of bond you hold to hedge the price at time T. Aka the ratio between the expected payoff of contract vs the bond
+\item Under T measure, this value should equal to $\frac{V(t)}{B(t, T)}$ at time t
+\item In fact, the ratio value mentioned in first item should equal to $\frac{V(0)}{B(0, T)} $ at time 0
+\item According to the {\color{red}Tower Theorem, this second and third items are chained up to force the evolution of $f$ from time 0 to time t, the f is a martingale}
+\end{itemize}
+
+More intuitively, you can see using T measure just include/offset the factor of $B(0, T)$ and $D(T)$ in the risk neutral measure.
+
+\begin{equation}
+  f(0) = \frac{E^{B} V(T) D(T)}{E^BD(T)} = B(0, T)E^{B} V(T) D(T) =  E^{T}f(T)
+\end{equation}
+
+\subsubsection{Model Based}
+pass
+
+
+\end{document}

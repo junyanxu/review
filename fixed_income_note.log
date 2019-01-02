@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  1 JAN 2019 21:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  1 JAN 2019 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"System Design.tex"
-(./System Design.tex
+**fixed_income_note.tex
+(./fixed_income_note.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 7 languages loaded.
 (/opt/local/share/texmf-texlive/tex/latex/base/article.cls
@@ -22,7 +22,7 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
+) (./mystyle.sty
 (/opt/local/share/texmf-texlive/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -143,22 +143,22 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (/opt/local/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-)
-(./System Design.aux)
-\openout1 = `"System Design.aux"'.
+))
+(./fixed_income_note.aux)
+\openout1 = `fixed_income_note.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -252,78 +252,62 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count105
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+LaTeX Font Info:    Try loading font information for U+msa on input line 9.
 
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
 
 (/opt/local/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
- (./System Design.toc)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
+
+(./fixed_income_note.toc)
 \tf@toc=\write3
-\openout3 = `"System Design.toc"'.
+\openout3 = `fixed_income_note.toc'.
 
-[1
+ [1
 
-{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-[4]
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 191.
- [5] [6]
-Overfull \hbox (17.29451pt too wide) in paragraph at lines 278--279
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (61.39442pt too wide) in paragraph at lines 282--283
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (48.79445pt too wide) in paragraph at lines 283--284
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][] 
- []
-
-[7] [8] (./System Design.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+ [2] [3] (./fixed_income_note.aux) ) 
 Here is how much of TeX's memory you used:
- 4193 strings out of 494952
- 58077 string characters out of 6178878
- 154171 words of memory out of 5000000
- 7387 multiletter control sequences out of 15000+600000
- 14056 words of font info for 54 fonts, out of 8000000 for 9000
+ 4019 strings out of 494952
+ 56274 string characters out of 6178878
+ 142099 words of memory out of 5000000
+ 7211 multiletter control sequences out of 15000+600000
+ 13888 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,58p,247b,1468s stack positions out of 5000i,500n,10000p,200000b,80000s
-</opt/local/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmbx10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.p
-fb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></op
-t/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/loc
-al/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/local/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/local/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/local/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "System Design.pdf" (8 pages, 139390 bytes).
+ 40i,11n,60p,250b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+</opt/local/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmbx10.pfb></opt/local/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb></opt/local/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/lo
+cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/local/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/local/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></opt/local/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb>
+Output written on fixed_income_note.pdf (3 pages, 147445 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
