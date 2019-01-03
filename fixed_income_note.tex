@@ -26,11 +26,11 @@ Then recall the definition of the fundamental theorem that there exists a measur
 If we further assume the measure is at time T, which is the same expiration time of the zero-coupon bonds, then we have:
 
 \begin{equation}
-  \frac{V(t)}{B(0, T)} = E^{T}\frac{V(T)}{B(T, T)} = E^{T}V(T) 
+  \frac{V(t)}{B(0, T)} = E^{T}\frac{V(T)}{B(T, T)} = E^{T}V(T)
 \end{equation}
 
 \begin{equation}
-  V(t) = B(0, T)E^{T}V(T) 
+  V(t) = B(0, T)E^{T}V(T)
 \end{equation}
 
 The idea behind this is that, we cannot find a way using bond to hedge our payoff then get money at any condition. Recall the similar risk neutral
@@ -66,7 +66,55 @@ More intuitively, you can see using T measure just include/offset the factor of 
   f(0) = \frac{E^{B} V(T) D(T)}{E^BD(T)} = B(0, T)E^{B} V(T) D(T) =  E^{T}f(T)
 \end{equation}
 
-\subsubsection{Model Based}
+
+\subsubsection{Change of Numeraire}
+Thinking intuitively, T measure is just some drift transformation of normal distribution. Under risk-neutral measure, assume we have two process $S(t)$ and $N(t)$ (both are tradable assets).
+
+\begin{equation}
+  D(t)S(t) = D(0) S(0) \exp(\int_{0}^{t} \sigma(t) d\widetilde{W}(u) - 0.5\int_{0} ^ {t} \norm{\sigma(t) ^ 2} du)
+\end{equation}
+\begin{equation}
+  D(t)N(t) = D(0) N(0) \exp(\int_{0}^{t} \mu(t) d\widetilde{W}(u) - 0.5\int_{0} ^ {t} \norm{\mu(t) ^ 2} du)
+\end{equation}
+
+So therefore under this risk neutral pricing measure, we can have
+\begin{equation}
+  \begin{aligned}
+  \frac{S(t)}{N(t)} &= \frac{S(0)}{N(0)} \exp(\int_{0}^{t} (\sigma(t) - \mu(t)) d\widetilde{W}(u) - 0.5\int_{0} ^ {t} (\norm{\sigma(t) ^ 2} - \norm{\mu(t) ^ 2}) du) \\
+                    &= \frac{S(0)}{N(0)} \exp(\int_{0}^{t} (\sigma(t) - \mu(t)) d\widetilde{W}(u) - 0.5\int_{0} ^ {t} (\sigma(t) - \mu(t)) ^ 2 du) - \int_0^t\sum_{1} ^ {d} \mu_{i}(t)(\sigma_{i}(t) - \mu_{i}(t)) du
+  \end{aligned}
+\end{equation}
+
+So we can find a measure
+
+\begin{equation}
+  \begin{aligned}
+    d\widetilde{W}^N(u) &= \begin{bmatrix}
+            d\widetilde{W}_{1}  - \mu_1(u)\\
+            d\widetilde{W}_{2}  - \mu_2(u)\\
+            \vdots \\
+            d\widetilde{W}_{d}  - \mu_d(u)
+          \end{bmatrix}
+    \end{aligned}
+\end{equation}
+
+This equation is telling you that {\color{red}under measure N, the normal distribution in risk neutral have positive drift $\mu(u)$}
+
+\begin{exmp}
+Under single stock measure, the log normal stock actually have $\sigma ^ 2$ drift
+\begin{equation}
+  \begin{aligned}
+  d(\frac{\log(S)}{S}) = (r - \frac{1}{2} \sigma^2)dt + \sigma \cdot \sigma dt + \sigma d\widetilde{W}^S(t)
+  \end{aligned}
+\end{equation}
+\end{exmp}
+
+\begin{exmp}
+Quanto option
+\end{exmp}
+
+
+\subsubsection{Normal Based T Measure}
 pass
 
 

@@ -5,9 +5,10 @@
 \usepackage{graphicx}                           % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 % TeX will automatically convert eps --> pdf in pdflatex
 \usepackage{amssymb}
-
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{mathtools}
 \lstset { %
   language=C++,
   basicstyle=\small\ttfamily,
@@ -15,4 +16,10 @@
   stringstyle=\color{green}\ttfamily,
   commentstyle=\color{red}\ttfamily,
   morecomment=[l][\color{magenta}]{\#}
-  }                                               
+  }
+
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
