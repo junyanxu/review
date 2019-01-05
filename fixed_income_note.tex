@@ -3,7 +3,7 @@
 \usepackage{mystyle}
 
 \title{Fixed Income Review}
-\author{junyan.xu\footnote{junyan.xu@jpmorgan.com}}
+\author{junyan.xu\footnote{junyanxu5513@gmail.com}}
 
 \begin{document}
 \maketitle
@@ -96,6 +96,7 @@ So we can find a measure
             d\widetilde{W}_{d}  - \mu_d(u)
           \end{bmatrix}
     \end{aligned}
+  \label{measure_change}
 \end{equation}
 
 This equation is telling you that {\color{red}under measure N, the normal distribution in risk neutral have positive drift $\mu(u)$}
@@ -128,7 +129,7 @@ The inverse of exchange rate process under EUR is
 d(\frac{1}{S_2}) = \frac{1}{S_2} ( (r_d - r_f + \sigma_2^2) dt - \sigma_2 d\widetilde{W_2}^f(t) )
 \end{equation}
 
-Under EUR risk neutral measure, the XAU by USD have
+Under EUR risk neutral measure, the XAU by USD have (using $dXY = XdY + Xdx + dXdY$)
 
 \begin{equation}
 \frac{dS_3}{S_3} = (r_d + \sigma_2^2 - \rho\sigma_1\sigma_2) dt  + \sigma_1 d\widetilde{W_1}^f(t) - \sigma_2 d\widetilde{W_2}^f(t)
@@ -149,7 +150,34 @@ The last equation shows that {\color{blue}after exchange rate consideration, the
 \end{exmp}
 
 \subsection{Normal Based T Measure}
-pass
+Based on the analysis above. Since discount zero coupon bond is a martingale under risk neutral measure.
+\begin{equation}
+\begin{aligned}
+d(D(t)B(t, T)) = D(t)B(t, T) - \sigma^\ast(t) d\widetilde{W}(t)
+\end{aligned}
+\end{equation}
+Use equation \ref{measure_change} can effciently get
+\begin{equation}
+\begin{aligned}
+d\widetilde{W}^T(t) - \sigma^\ast(t) = d\widetilde{W}(t)
+\end{aligned}
+\end{equation}
+
+\subsection{Use T Measure To Price Option}
+Even if interest rate is random, we can still get BS formula in a very general way.
+
+\begin{equation}
+\begin{aligned}
+\widetilde{E}(D(T)(S(T) - K))^+ &= \widetilde{E}(D(T)S(T) \mathbbm{1} [ S(T) > K ]) - K\widetilde{E}(D(T)\mathbbm{1} [ S(T) > K ])
+\end{aligned}
+\end{equation}
+
+The second part is easy to show
+\begin{equation}
+\begin{aligned}
+ K\widetilde{E}(D(T)\mathbbm{1} [ S(T) > K ]) &= KB(0, T) \widetilde{E} ^ T (F(T, T) > K)
+\end{aligned}
+\end{equation}
 
 
 \end{document}
