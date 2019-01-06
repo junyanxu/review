@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  5 JAN 2019 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  5 JAN 2019 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -390,28 +390,29 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 
  [1
 
-{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./forward_measur
+e.tex
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
  [2]
-Overfull \hbox (40.50432pt too wide) detected at line 86
+Overfull \hbox (40.50432pt too wide) detected at line 74
 [] []
  []
 
 [3]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 171.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 159.
  (/opt/local/share/texmf-texlive/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [4] [5]
+) [4]) [5]
 (./fixed_income_note.aux) ) 
 Here is how much of TeX's memory you used:
- 5263 strings out of 494952
- 74180 string characters out of 6178878
- 166147 words of memory out of 5000000
+ 5266 strings out of 494952
+ 74235 string characters out of 6178878
+ 167147 words of memory out of 5000000
  8414 multiletter control sequences out of 15000+600000
  14284 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,14n,60p,289b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,14n,60p,313b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/junyan/.texlive2015/texmf-var/fonts/pk/ljfo
 ur/public/bbm/bbm10.657pk></opt/local/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmbx10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfont
@@ -427,7 +428,7 @@ fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texlive/fonts
 /type1/public/amsfonts/cm/cmsy6.pfb></opt/local/share/texmf-texlive/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb></opt/local/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb>
-Output written on fixed_income_note.pdf (5 pages, 165829 bytes).
+Output written on fixed_income_note.pdf (5 pages, 168252 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
