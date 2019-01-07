@@ -3,13 +3,13 @@
 \subsection{Intuitive Definition}
 
 To start with, recall in the HJM framework we have the discount value of a bond price is a martingale in risk neutral measure. This is true
-because any tradeable assets must be a martingale in risk neutral measure otherwise you have arbitrage oppurtunity
+because any tradable assets must be a martingale in risk neutral measure otherwise you have arbitrage opportunity
 
 \begin{equation}
   d(D(t)B(t, T)) = -\sigma^{\ast}D(t)B(t, T)d\widetilde{W}(t)
 \end{equation}
 
-Then recall the definition of the fundamental theorem that there exists a measure between two tradeable assets that those two can form a martingale.
+Then recall the definition of the fundamental theorem that there exists a measure between two tradable assets that those two can form a martingale.
 
 If we further assume the measure is at time T, which is the same expiration time of the zero-coupon bonds, then we have:
 
@@ -93,7 +93,7 @@ This equation is telling you that {\color{red}under measure N, the normal distri
 Under single stock measure, the log normal stock actually have $\sigma ^ 2$ drift
 \begin{equation}
   \begin{aligned}
-  d(\frac{\log(S)}{S}) = (r - \frac{1}{2} \sigma^2)dt + \sigma \cdot \sigma dt + \sigma d\widetilde{W}^S(t)
+  d(\log(S)) = (r - \frac{1}{2} \sigma^2)dt + \sigma \cdot \sigma dt + \sigma d\widetilde{W}^S(t)
   \end{aligned}
 \end{equation}
 \end{exmp}
