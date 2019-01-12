@@ -116,3 +116,28 @@ So
 This is the vol process under $B(t, T + \delta)$ measure
 
 So you can do PCA on historical vol to get component. Then use implied vol of zero coupon bonds or Caplets to get the factored implied vol. Finally you can use monte-carlo engine to price the exotics in forward rate process. The use that to do the pricing.of Caplets or Swaptions.
+
+\subsubsection{Price A Claim Using Terminal Bond Measure}
+
+Assume a payoff at time $t_n$ depend on the forward rate at $t1, t2, t3$, and now we are at $t$. Then we can to use the terminal bond measure {\color{blue} (You always have to use a measure to price as base. The example is pay something base on the average past forward rates, which are the use of series of rates for payments)}
+
+If we use  $B(t, t_n)$ measure to price the forward of the forward contract that pays $F(t_{n-2}, t_{n-1})$ at time $t_{n-1}$. Then we have 
+\begin{equation}
+\begin{aligned}
+E^{B(u, t_n)} (\frac{F(u, t_{n-2}, t_{n-1}) - {\color{blue}F(t, t_{n-2}, t_{n-1})}}{B(u, t_n)} (1 + \delta F(u, t_{n-1}, t_{n}))) |_{u=t_n}= 0 
+\end{aligned}
+\end{equation}
+
+The equation above can be rewrite as
+\begin{equation}
+\begin{aligned}
+{\color{blue}F(t, t_{n-2}, t_{n-1})} &= \frac{E^{B(u, t_n)}_{u=t_n} (F(u, t_{n-2}, t_{n-1}) (1 + \delta F(u, t_{n-1}, t_{n}))}{E^{B(u, t_n)}_{u=t_n}(1 + \delta F(u, t_{n-1}, t_{n}))} \\ 
+&= \frac{COV^{B(u, t_n)}_{u=t_n} (F(u, t_{n-2}, t_{n-1}) (1 + \delta F(u, t_{n-1}, t_{n}))}{E^{B(u, t_n)}_{u=t_n}(1 + \delta F(u, t_{n-1}, t_{n}))} + E^{B(u, t_n)}_{u=t_n}F(u, t_{n-2}, t_{n-1})\\ 
+&= \frac{\delta\rho_{t_{n-2}, t_{n-1}}\sigma_{t_{n-2}}\sigma_{t_{n-1}}}{\color{red}E^{B(u, t_n)}_{u=t_n}(1 + \delta F(u, t_{n-1}, t_{n}))} + E^{B(u, t_n)}_{u=t_n}F(u, t_{n-2}, t_{n-1}) \\
+&= \frac{\delta\rho_{t_{n-2}, t_{n-1}}\sigma_{t_{n-2}}\sigma_{t_{n-1}}}{1 + \delta F(t, t_{n-1}, t_{n}))} + E^{B(u, t_n)}_{u=t_n}F(u, t_{n-2}, t_{n-1})
+\end{aligned}
+\end{equation}
+
+So the drift is $ -\frac{\rho_{t_{n-2}, t_{n-1}}\sigma_{t_{n-2}}\sigma_{t_{n-1}}}{1 + \delta F(t, t_{n-1}, t_{n}))} $
+
+
