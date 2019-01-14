@@ -1,6 +1,63 @@
 \section{Coding Basics}
 \subsection{C++}
 \subsubsection{Template}
-\subsubsection{Var Dict}
+
+Key things to know for template:
+\begin{enumerate}
+\item as long as the type is specified clearly, template class will be initiated at compile type
+\item you can write a factorial calculation at using template at complied time. also {\color{blue}constexpr} will achieve this function as well
+\item we can achieve virtual function by using template
+\end{enumerate}
+
+\begin{lstlisting}
+#include<iostream>
+#include<string>
+using namespace std;
+
+template <typename T> void show(const T& data){
+  if(typeid(data) == typeid(string("abc")))
+    cout << "This is a string" << endl;
+  if(typeid(data) == typeid(1))
+    cout << "This is a int" << endl;
+}
+
+int main(){
+  show(8);
+  show(string("abc"));
+}
+\end{lstlisting}
+
+\subsubsection{Variable Dict}
+
+Use variable dict template to write print function
+
+\begin{lstlisting}
+#include<iostream>
+#include<string>
+using namespace std;
+
+template<typename T> void print(const T&t){
+  cout << t << endl;
+}
+
+template<typename T, typename... Y> void print(const T& first, Y... y){
+  cout << first << " ";
+  print(y...);
+}
+
+int main(){
+  print(1, 2, 3, "abc");
+}
+\end{lstlisting}
+
 \subsubsection{Perfect Forwarding}
-\subsubsection{smart pointer}
+\subsubsection{Smart Pointer}
+
+\subsection{Python}
+\subsubsection{Dataframe Data-structure}
+
+\subsection{Java}
+
+\subsection{UNIX Bash}
+
+\subsection{MongoDB}
