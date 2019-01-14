@@ -1,0 +1,15 @@
+\section{Instrument Basics}
+\subsection{Durations}
+Assume time interval is $\tau$, yield is $y$ and term is $k$. We have price
+\begin{equation}
+\begin{aligned}
+P = \sum_{i=1} ^ k c\frac{1}{(1 + y\tau) ^ i} + \frac{1}{(1 + y\tau) ^ k}
+\end{aligned}
+\end{equation}
+If we take the derivative of P versus y
+\begin{equation}
+\begin{aligned}
+dP = {\color{red}-\frac{1}{1 + y\tau}} {\color{blue}\sum_{i=1} ^ k \frac{c\tau i}{(1 + y\tau) ^ i} + \frac{k\tau}{(1 + y\tau) ^ k}}
+\end{aligned}
+\end{equation}
+The blue part divided by P is the duration. The red part times the blue part over $P$ is the adjusted duration. Key thing to remember is that adjusted duration have a factor of $\frac{1}{1 + y\tau}$

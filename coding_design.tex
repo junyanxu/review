@@ -1,43 +1,9 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ...
-%\geometry{landscape}                		% Activate for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex
-\usepackage{amssymb}
-
-\usepackage{listings}
-\usepackage{xcolor}
-\lstset { %
-	language=C++,
-	basicstyle=\small\ttfamily,
-	keywordstyle=\color{blue}\ttfamily,
-	stringstyle=\color{green}\ttfamily,
-	commentstyle=\color{red}\ttfamily,
-	morecomment=[l][\color{magenta}]{\#}
-}
-
-%SetFonts
-
-%SetFonts
-
-
-\title{Technical Review}
-\author{junyan.xu\footnote{junyanxu5513@gmail.com}}
-%\date{}							% Activate to display a given date or no date
-
-\begin{document}
-\maketitle
-
-\tableofcontents
-
 \newpage
-
-\section{SOLID Principles}
+\section{Coding Design}
+\subsection{SOLID Principles}
 Solid principles are the most basic principles in system design
 
-\subsection{Single Responsible principle}
+\subsubsection{Single Responsible principle}
 Suppose you are going to design two classes, \textit{ractangle} and \textit{triangle}.
 
 \begin{lstlisting}
@@ -90,7 +56,7 @@ struct getSize(const shape* s){
 \end{lstlisting}
 The single responsible principle tell us to write a function only for a single purpose. Do not control to many things.
 
-\subsection{Open/Close principle}
+\subsubsection{Open/Close principle}
 Inside the get size function, a short cut. We can write the function with bunch of if-else:
 \begin{lstlisting}
 struct getSize(const shape* s){
@@ -155,9 +121,9 @@ int getSize(const shape* s){
 	return s->getSize();
 }
 \end{lstlisting}
-Then every method is closed. If we want to have new class, no existing code section will be modified.
+Then every method is closed. If we want to have new class, no existing code subsection will be modified.
 
-\subsection{Liskov Substitution principle}
+\subsubsection{Liskov Substitution principle}
 Liskov substitution principle is about how to design base and child to be inter-changeable. The famous eclipse-circle problem is
 \begin{lstlisting}
 class eclipse{
@@ -192,7 +158,7 @@ Then our circle must have this method too. However, circle cannot have this meth
   \item redefine the data model, add another common base class "shape" to both of it. Now circle vs eclipse is D vs D (Derived vs Derived)
 \end{itemize}
 
-\subsection{Interface Segregation Principle}
+\subsubsection{Interface Segregation Principle}
 In a short word, base interface should not have too much functions, which means the derived class should never be forced to have the method it does not use.
 \begin{lstlisting}
 class shape{
@@ -251,7 +217,7 @@ class cubic: SolidShape {
 };
 \end{lstlisting}
 
-\subsection{Dependency Inversion Principle}
+\subsubsection{Dependency Inversion Principle}
 
 This is the easiest of five. The higher level function should only rely on the lower level abstractions but not the detailed implementation.
 The bridge pattern, abstract factory pattern are good example. Here the high-level user paint depend on the abstraction of different Painter,
@@ -293,7 +259,7 @@ private:
 \end{lstlisting}
 
 \newpage
-\section{Management Type Object Design}
-\section{Reservation Type Object Design}
-\section{Card Game Type Object Design}
-\end{document}
+\subsection{OOD Case Analysis}
+\subsubsection{Management Type Object Design}
+\subsubsection{Reservation Type Object Design}
+\subsubsection{Card Game Type Object Design}
