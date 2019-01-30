@@ -1,3 +1,4 @@
+\newpage
 \section{Coding Basics}
 \subsection{C++}
 \subsubsection{Template}
@@ -27,7 +28,7 @@ int main(){
 }
 \end{lstlisting}
 
-\subsubsection{Variable Dict}
+\subsubsection{Variadic Template}
 
 Use variable dict template to write print function
 
@@ -51,13 +52,69 @@ int main(){
 \end{lstlisting}
 
 \subsubsection{Perfect Forwarding}
-\subsubsection{Smart Pointer}
 
+Consider example below, if there is no perfect forwarding, the passed in right value $t$ will become left value if passed to the next function on the stack. 
+\begin{lstlisting}
+#include<utility>
+template<typename T, typename U>
+std:: pair<T, U>make_pair_wrapper(T&&t, U&&u){
+	return std::make_pair(std::forward<T>(t), std::forward<U>(u));	
+}
+\end{lstlisting}
+\subsubsection{Smart Pointer}
+Key things to remember:
+\begin{enumerate}
+\item smart pointer will have a internal reference will add 1 when copy, create, go into field and minus 1 when destruct out of field.
+\item smart pointer must be copy when returned
+\item comment area wont work, no implicit conversion
+\item no cycle allowed, use weak pointer.
+\end{enumerate}
+
+\begin{lstlisting}
+#include<memory>
+using namespace std;
+/*                                                                              
+int* test(){                                                                    
+  return make_shared<int>(1);                                                   
+}                                                                               
+*/
+
+shared_ptr<int> test(){
+  return make_shared<int>(1);
+}
+\end{lstlisting}
 \subsection{Python}
 \subsubsection{Dataframe Data-structure}
-
-\subsection{Java}
-
-\subsection{UNIX Bash}
+\begin{enumerate}
+\item pandas.DataFrame is a column major data structure, each colume is a pd.Series (act as a dictionary plus ndarray).
+\item DataFrame frame will group all same type data into a block, int, float, datetime64 ... etc
+\item string does not have representation in numpy so in pandas, it is a pointer point to other places, which is very slow
+\item use {\color{red}category} dtype can solve most of string issue properly
+\end{enumerate}
 
 \subsection{MongoDB}
+
+MongoDB has three layers:
+\begin{enumerate}
+\item Database (equivalent to schema)
+\item Collection (equivalent to table)
+\item Document (equivalent to row, in json format)
+\end{enumerate}
+
+Here are some useful command for mongodb
+\begin{lstlisting}
+db.createCollection("mycol", { capped : true, autoIndexId : true, size : 
+   6142800, max : 10000 } )
+   
+db.tutorialspoint.insert({"name" : "tutorialspoint"})
+
+db.mycol.find({},{"title":1,_id:0})
+
+db.COLLECTION_NAME.find().sort({KEY:1})
+
+db.COLLECTION_NAME.ensureIndex({KEY:1})
+
+db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}])
+\end{lstlisting}
+
+MongoDB has easy to config sharding, create backup, map reduce interfaces.
