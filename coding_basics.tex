@@ -8,23 +8,27 @@ Key things to know for template:
 \item as long as the type is specified clearly, template class will be initiated at compile type
 \item you can write a factorial calculation at using template at complied time. also {\color{blue}constexpr} will achieve this function as well
 \item we can achieve virtual function by using template
+\item the template function can do the type deduction, while template class must specify the typename or leave it blank
+\item think of var-dict as Type ...
+\item template deduction can be used for compiled time calculation
+\item template can also be used to achieve static poly-morphism
 \end{enumerate}
 
+\subsubsection{Compiled Time Calculation}
+This is called template-metaprogramming. You actually store function template dur- ing compliation. Trade-o↵ between compile time and run-time. Also, use \textit{ftemplate- depth=200000} to enforce how many recursion you need in compile
+
 \begin{lstlisting}
-#include<iostream>
-#include<string>
+#include <iostream >
 using namespace std;
-
-template <typename T> void show(const T& data){
-  if(typeid(data) == typeid(string("abc")))
-    cout << "This is a string" << endl;
-  if(typeid(data) == typeid(1))
-    cout << "This is a int" << endl;
+template<int N> int gauss_sum(){
+  return N + gauss_sum <N-1>();
 }
-
-int main(){
-  show(8);
-  show(string("abc"));
+template <> int gauss_sum <0>(){
+  return 0;
+}
+int main(int argc, char *argv[]) {
+  cout<<gauss_sum <20>() << endl;
+  return 0; }
 }
 \end{lstlisting}
 
@@ -51,14 +55,50 @@ int main(){
 }
 \end{lstlisting}
 
+\subsubsection{Static Polymorphism (CRTP)}
+Polymorphism can be achived using inheritance. You first write a base class as template algorithmm and customize small function using inheritance to overwrite.
+
+Also you can do it using following template pattern
+\begin{lstlisting}
+#include < iostream >
+#include < string >
+using namespace std;
+template <typename derived > class base{
+  public:
+  void talk (){
+    cout << "my name is " << get_name() << endl;
+  }
+  string get_name (){
+    return static_cast <derived*>(this) -> get_name();
+  }
+};
+// must be public inheritance here otherwise error
+class cat: public base <cat >{
+  // must add friend here since base class need to // access this method
+  private:
+  friend string base <cat >:: get_name (); string get_name (){
+    return "cat"; }
+  };
+
+int main(int argc, char *argv[]) {
+    // direct initialize
+    cat d; d.talk();
+    // use heap to initialize
+    base<cat>* c = new cat(); c->talk();
+    return 0;
+}
+
+
+\end{lstlisting}
+
 \subsubsection{Perfect Forwarding}
 
-Consider example below, if there is no perfect forwarding, the passed in right value $t$ will become left value if passed to the next function on the stack. 
+Consider example below, if there is no perfect forwarding, the passed in right value $t$ will become left value if passed to the next function on the stack.
 \begin{lstlisting}
 #include<utility>
 template<typename T, typename U>
 std:: pair<T, U>make_pair_wrapper(T&&t, U&&u){
-	return std::make_pair(std::forward<T>(t), std::forward<U>(u));	
+	return std::make_pair(std::forward<T>(t), std::forward<U>(u));
 }
 \end{lstlisting}
 \subsubsection{Smart Pointer}
@@ -73,10 +113,10 @@ Key things to remember:
 \begin{lstlisting}
 #include<memory>
 using namespace std;
-/*                                                                              
-int* test(){                                                                    
-  return make_shared<int>(1);                                                   
-}                                                                               
+/*
+int* test(){
+  return make_shared<int>(1);
+}
 */
 
 shared_ptr<int> test(){
@@ -103,9 +143,9 @@ MongoDB has three layers:
 
 Here are some useful command for mongodb
 \begin{lstlisting}
-db.createCollection("mycol", { capped : true, autoIndexId : true, size : 
+db.createCollection("mycol", { capped : true, autoIndexId : true, size :
    6142800, max : 10000 } )
-   
+
 db.tutorialspoint.insert({"name" : "tutorialspoint"})
 
 db.mycol.find({},{"title":1,_id:0})
