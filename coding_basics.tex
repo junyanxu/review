@@ -123,6 +123,55 @@ shared_ptr<int> test(){
   return make_shared<int>(1);
 }
 \end{lstlisting}
+
+\subsection{Java}
+A bit overview here:
+\begin{enumerate}
+\item All the value are reference but all the value are passed by value in argument
+\item No operator overloading like C++, but {\color{red} except for String that is pre-given}
+\item Array does not support allocating generic type \textit{eg. ArrayList}
+\item Boolean, String is inmmutable in Java, as well as {\color{blue} Integer, Boolean, etc} wrapper types
+\item Java manage memory like convey belt, keep move heap head pointer foward while using GC move what are behind closer to head.
+\item {\color{blue} adaptive garbage collection scheme} has two types {\color{blue} Stop And Copy} and {\color{blue} Mark and Sweep}.
+\item ArrayList vs Vector/Stack in Java is that the later two are thread safe but slower
+\end{enumerate}
+
+\subsubsection{Pass by Value}
+
+Java's references in fact act as a handle (with value in memory) that point to a position of an Object (More like a pointer instead of another name). Therefore, \textit{swap} function like in C++ can not really achieve jobs.
+
+\begin{lstlisting}
+class MyObject{
+    public MyObject(int x){
+        data = x;
+    }
+
+    public MyObject(MyObject other){
+        data = other.data;
+    }
+    public int data;
+}
+
+class pass_by_reference{
+    public static void swap(MyObject a, MyObject b){
+        MyObject c = new MyObject(a);
+        a = b;
+        b = c;
+    }
+
+    public static void main(String args[]){
+        MyObject a = new MyObject(1);
+        MyObject b = new MyObject(2);
+        swap(a, b);
+        System.out.printf("a: %d, b: %d\n", a.data, b.data);
+        // results are: a: 1, b: 2
+    }
+}
+\end{lstlisting}
+
+
+
+
 \subsection{Python}
 \subsubsection{Dataframe Data-structure}
 \begin{enumerate}
