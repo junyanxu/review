@@ -169,6 +169,94 @@ class pass_by_reference{
 }
 \end{lstlisting}
 
+\subsubsection{Producer And Consumer}
+Java has good ability of multi-processing. Here is a example using ArraList implementing a locked bounded queue.
+
+In Java, {\color{blue} using \textit{new Thread lambda} can bypass the constrain of using \textit{Runnable} where you need to make sure your queue is \textit{static final}}
+
+Here are summary of Semaphore/Conditional variable
+\begin{enumerate}
+\item Semaphore must acquire before locked
+\item Conditional variable must acquire after locked, and use while to keep release; While in C++ you don't need to
+\end{enumerate}
+
+\begin{lstlisting}
+package com.company;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.Semaphore;
+
+public class Main {
+
+    static class Buffer {
+        private int size;
+        private ArrayList<Integer> data;
+        private Semaphore full;
+        private Semaphore empty;
+        public Buffer(int size){
+            this.size=size;
+            this.data = new ArrayList<Integer>();
+            this.full = new Semaphore(this.size);
+            this.empty = new Semaphore(0);
+        }
+        public void add(int value){
+            try {
+                full.acquire();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            synchronized (this) {
+                data.add(value);
+                empty.release();
+            }
+        }
+        public Integer get(){
+            try {
+                empty.acquire();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            synchronized(this){
+                Integer value = data.get(data.size()-1);
+                data.remove(data.size()-1);
+                full.release();
+                return value;
+            }
+
+        }
+    } ;
+
+    public static void main(String[] args) throws InterruptedException {
+        Buffer b = new Buffer(10);
+        int producer_num = 2;
+        int consumer_num = 2;
+        ArrayList<Thread> a = new ArrayList<Thread>();
+        for(int i = 0; i< producer_num; i++){
+            a.add(new Thread(() ->{
+                    for(int j = 0; j<20; j++) {
+                        int value = new Random().nextInt(100);
+                        b.add(value);
+                        System.out.printf("producer %d add %d\n",
+                        Thread.currentThread().getId(), value);
+                    }
+            }));
+        }
+        for(int i = 0; i< consumer_num; i++) {
+            a.add(new Thread(()-> {
+                for (int j = 0; j < 20; j++) {
+                    Integer value = new Integer(b.get());
+                    System.out.printf("consumer %d get %d\n",
+                    Thread.currentThread().getId(), value);
+                }
+            }));
+        }
+        for(Thread i: a) i.start();
+        for(Thread i: a) i.join();
+    }
+}
+\end{lstlisting}
+
+
 
 
 

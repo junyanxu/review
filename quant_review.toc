@@ -27,13 +27,14 @@
 \contentsline {subsubsection}{\numberline {5.1.6}Smart Pointer}{14}{subsubsection.5.1.6}
 \contentsline {subsection}{\numberline {5.2}Java}{15}{subsection.5.2}
 \contentsline {subsubsection}{\numberline {5.2.1}Pass by Value}{15}{subsubsection.5.2.1}
-\contentsline {subsection}{\numberline {5.3}Python}{16}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Dataframe Data-structure}{16}{subsubsection.5.3.1}
-\contentsline {subsection}{\numberline {5.4}MongoDB}{16}{subsection.5.4}
-\contentsline {section}{\numberline {6}Coding Design}{17}{section.6}
-\contentsline {subsection}{\numberline {6.1}SOLID Principles}{17}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Single Responsible principle}{17}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}Open/Close principle}{18}{subsubsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.3}Liskov Substitution principle}{19}{subsubsection.6.1.3}
-\contentsline {subsubsection}{\numberline {6.1.4}Interface Segregation Principle}{20}{subsubsection.6.1.4}
-\contentsline {subsubsection}{\numberline {6.1.5}Dependency Inversion Principle}{21}{subsubsection.6.1.5}
+\contentsline {subsubsection}{\numberline {5.2.2}Producer And Consumer}{16}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Python}{18}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Dataframe Data-structure}{18}{subsubsection.5.3.1}
+\contentsline {subsection}{\numberline {5.4}MongoDB}{18}{subsection.5.4}
+\contentsline {section}{\numberline {6}Coding Design}{19}{section.6}
+\contentsline {subsection}{\numberline {6.1}SOLID Principles}{19}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Single Responsible principle}{19}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Open/Close principle}{20}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Liskov Substitution principle}{21}{subsubsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.4}Interface Segregation Principle}{22}{subsubsection.6.1.4}
+\contentsline {subsubsection}{\numberline {6.1.5}Dependency Inversion Principle}{23}{subsubsection.6.1.5}
