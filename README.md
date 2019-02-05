@@ -7,6 +7,6 @@ It has:
 2. In-depth Programming Bullet Points 
 
 
-Smaller logo: ![Alt][1]
+**CHECK OUT PDF** Here: ![Alt][1]
 
 [1]: /quant_review.pdf "Title"
