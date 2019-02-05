@@ -1,4 +1,4 @@
-# Review
+# Practical Quant Review
 
 This is a practical review for being a quant developer.
 
