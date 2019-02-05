@@ -12,6 +12,10 @@ Key things to know for template:
 \item think of var-dict as Type ...
 \item template deduction can be used for compiled time calculation
 \item template can also be used to achieve static poly-morphism
+\item Java constructor does not have return type and invoke implicitly
+\item we cannot overwrite static method in class
+\item just like c++ you cannot change return type during overloading
+\item It's possible to override the function by return different type (must be sub-type) and it's called {\color{red}covariant}.
 \end{enumerate}
 
 \subsubsection{Compiled Time Calculation}
@@ -134,6 +138,8 @@ A bit overview here:
 \item Java manage memory like convey belt, keep move heap head pointer foward while using GC move what are behind closer to head.
 \item {\color{blue} adaptive garbage collection scheme} has two types {\color{blue} Stop And Copy} and {\color{blue} Mark and Sweep}.
 \item ArrayList vs Vector/Stack in Java is that the later two are thread safe but slower
+\item {\color{blue}default} keyword is for restricting use of class inside package
+\
 \end{enumerate}
 
 \subsubsection{Pass by Value}
