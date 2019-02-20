@@ -19,22 +19,23 @@
 \contentsline {subsection}{\numberline {4.1}LMM}{11}{subsection.4.1}
 \contentsline {section}{\numberline {5}Coding Basics}{12}{section.5}
 \contentsline {subsection}{\numberline {5.1}C++}{12}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Template}{12}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Compiled Time Calculation}{12}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Variadic Template}{13}{subsubsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.4}Static Polymorphism (CRTP)}{13}{subsubsection.5.1.4}
-\contentsline {subsubsection}{\numberline {5.1.5}Perfect Forwarding}{14}{subsubsection.5.1.5}
-\contentsline {subsubsection}{\numberline {5.1.6}Smart Pointer}{14}{subsubsection.5.1.6}
-\contentsline {subsection}{\numberline {5.2}Java}{15}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Pass by Value}{15}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Producer And Consumer}{16}{subsubsection.5.2.2}
-\contentsline {subsection}{\numberline {5.3}Python}{18}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Dataframe Data-structure}{18}{subsubsection.5.3.1}
-\contentsline {subsection}{\numberline {5.4}MongoDB}{18}{subsection.5.4}
-\contentsline {section}{\numberline {6}Coding Design}{19}{section.6}
-\contentsline {subsection}{\numberline {6.1}SOLID Principles}{19}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Single Responsible principle}{19}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}Open/Close principle}{20}{subsubsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.3}Liskov Substitution principle}{21}{subsubsection.6.1.3}
-\contentsline {subsubsection}{\numberline {6.1.4}Interface Segregation Principle}{22}{subsubsection.6.1.4}
-\contentsline {subsubsection}{\numberline {6.1.5}Dependency Inversion Principle}{23}{subsubsection.6.1.5}
+\contentsline {subsubsection}{\numberline {5.1.1}Break String}{12}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Template}{13}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Compiled Time Calculation}{13}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Variadic Template}{14}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}Static Polymorphism (CRTP)}{14}{subsubsection.5.1.5}
+\contentsline {subsubsection}{\numberline {5.1.6}Perfect Forwarding}{15}{subsubsection.5.1.6}
+\contentsline {subsubsection}{\numberline {5.1.7}Smart Pointer}{15}{subsubsection.5.1.7}
+\contentsline {subsection}{\numberline {5.2}Java}{16}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Pass by Value}{16}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Producer And Consumer}{17}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Python}{19}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Dataframe Data-structure}{19}{subsubsection.5.3.1}
+\contentsline {subsection}{\numberline {5.4}MongoDB}{19}{subsection.5.4}
+\contentsline {section}{\numberline {6}Coding Design}{20}{section.6}
+\contentsline {subsection}{\numberline {6.1}SOLID Principles}{20}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Single Responsible principle}{20}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Open/Close principle}{21}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Liskov Substitution principle}{22}{subsubsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.4}Interface Segregation Principle}{23}{subsubsection.6.1.4}
+\contentsline {subsubsection}{\numberline {6.1.5}Dependency Inversion Principle}{24}{subsubsection.6.1.5}

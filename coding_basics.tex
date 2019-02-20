@@ -1,6 +1,55 @@
 \newpage
 \section{Coding Basics}
 \subsection{C++}
+
+\subsubsection{Break String}
+A very basic thing about c++ is how to break the string using some token. Since C++11 add regex, so there are two common way of breaking strings.
+
+\begin{lstlisting}
+#include<iostream>
+#include<vector>
+#include<string>
+#include<sstream>
+#include<regex>
+
+using namespace std;
+
+vector<string> break_string1(string& str){
+  vector<string> res;
+  stringstream ss(str);
+  string buff;
+  while(getline(ss, buff, ',')){
+    res.push_back(buff);
+  }
+  return res;
+}
+
+vector<string> break_string2(string& str){
+  regex r(",");
+  vector<string> res;
+  for(
+    auto x = sregex_token_iterator(str.begin(), str.end(), r, -1);
+    x!=sregex_token_iterator();
+    x++){
+    res.push_back((x->str()));
+  }
+  return res;
+}
+
+int main(int argc, char *argv[])
+{
+  string a("123,234,345");
+  for(auto x: break_string1(a))cout << x << " ";
+  cout <<endl;
+  for(auto x: break_string2(a))cout << x << " ";
+  cout <<endl;
+  return 0;
+}
+\end{lstlisting}
+
+remember when you use \textit{sregex\_token\_iterator}, the {\color{blue}regex must not be a right value}.
+
+
 \subsubsection{Template}
 
 Key things to know for template:
