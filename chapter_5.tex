@@ -1,5 +1,61 @@
 \section{Chapter 5}
 
+\subsection{Minimum Number of Arrows to Burst Balloons}
+Greedy Algo, very similar to merge intervals. {\color{blue}\textbf{time complexity $O(Nlog(N))$}}, {\color{blue}\textbf{space is $O(1)$}}
+
+\begin{lstlisting}
+class Solution {
+public:
+    int findMinArrowShots(vector<pair<int, int>>& points) {
+        sort(points.begin(), points.end());
+        int count = 0;
+        int right = 0;
+        for(int i=0; i<points.size(); i++){
+            if(i==0){
+                right = points[i].second;
+                count++;
+                continue;
+            }
+            if(points[i].first <= right)
+                right = min(right, points[i].second);
+            else{
+                count++;
+                right = points[i].second;
+            }
+        }
+        return count;
+    }
+};
+\end{lstlisting}
+
+
+
+\subsection{Minimum Moves to Equal Array Elements}
+
+Find minimum first, {\color{blue}\textbf{time complexity $O(N)$}}, {\color{blue}\textbf{space is $O(1)$}}. A set of good function in \textbf{algorithm} to be used
+
+\begin{enumerate}
+  \item nth\_element(a.begin(), a.begin()+n, a.end())
+  \item *min\_element(a.begin(), a.end())
+  \item *max\_element(a.begin(), a.end())
+\end{enumerate}
+
+
+
+\begin{lstlisting}
+class Solution {
+public:
+    int minMoves(vector<int>& nums) {
+        int m = *min_element(nums.begin(), nums.end());
+        long long res = 0;
+        for(auto x: nums)
+            res += abs((long long)x - m);
+        return res;
+    }
+};
+\end{lstlisting}
+
+
 
 \subsection{4 Sum Two}
 Use unordered\_map. {\color{blue}\textbf{time complexity $O(N^2)$}}, {\color{blue}\textbf{space is $O(N^2)$}}
@@ -7,7 +63,12 @@ Use unordered\_map. {\color{blue}\textbf{time complexity $O(N^2)$}}, {\color{blu
 \begin{lstlisting}
 class Solution {
 public:
-    int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
+    int fourSumCount(
+        vector<int>& A,
+        vector<int>& B,
+        vector<int>& C,
+        vector<int>& D
+      ) {
         unordered_map<int, int> a, b;
         for(auto x: A) for(auto y: B) a[x+y]++;
         for(auto x: C) for(auto y: D) b[x+y]++;
