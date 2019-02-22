@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  21 FEB 2019 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  21 FEB 2019 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**quant_review.tex
-(./quant_review.tex
+**lc_review.tex
+(./lc_review.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 7 languages loaded.
 (/opt/local/share/texmf-texlive/tex/latex/base/article.cls
@@ -367,9 +367,8 @@ Package: amsthm 2015/03/04 v2.20.2
 \dth@everypar=\toks28
 )
 \c@exmp=\count125
-)
-(./quant_review.aux)
-\openout1 = `quant_review.aux'.
+) (./lc_review.aux)
+\openout1 = `lc_review.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -385,7 +384,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -464,9 +462,9 @@ LaTeX Info: Redefining \ref on input line 6.
 LaTeX Info: Redefining \pageref on input line 6.
 LaTeX Info: Redefining \nameref on input line 6.
 
-(./quant_review.out) (./quant_review.out)
+(./lc_review.out) (./lc_review.out)
 \@outlinefile=\write3
-\openout3 = `quant_review.out'.
+\openout3 = `lc_review.out'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 8.
 
@@ -487,168 +485,60 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
- (./quant_review.toc
-[1
-
-{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+ (./lc_review.toc)
 \tf@toc=\write4
-\openout4 = `quant_review.toc'.
-
- [2]
-(./instrument_basics.tex) (./forward_measure.tex [3]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
-
-Overfull \hbox (40.50432pt too wide) detected at line 74
-[][][] []
- []
-
-[4] [5]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 159.
- (/opt/local/share/texmf-texlive/tex/latex/bbm-macros/ubbm.fd
-File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-))
-(./HJM_LMM.tex [6] [7]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 80.
+\openout4 = `lc_review.toc'.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delta' on input line 80.
+(./chapter_1.tex) (./chapter_2.tex) (./chapter_3.tex) (./chapter_4.tex)
+(./chapter_5.tex [1
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 80.
-
-
-Overfull \hbox (12.94928pt too wide) in paragraph at lines 88--89
-[]\OT1/cmr/m/n/10.95 Since at $\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 (\OML/cm
-m/m/it/10.95 t; T \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 ^^N\OT1/cmr/m/n/10.9
-5 )\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t; T\OT1/cmr/m/
-n/10.95 )$ mea-sure the $\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
-/10.95 t; T\OT1/cmr/m/n/10.95 )$ sat-isfy $\OML/cmm/m/it/10.95 d\OT1/cmr/m/n/10
-.95 (\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t; T\OT1/cmr/
-m/n/10.95 )) = \OML/cmm/m/it/10.95 ^^M\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t
-; T\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/1
-0.95 t; T\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 d[]\OT1/cmr/m/n/10.95 (\OML/cm
-m/m/it/10.95 t\OT1/cmr/m/n/10.95 )$.
- []
-
-[8]
-Overfull \hbox (3.82416pt too wide) detected at line 108
-[][][] []
- []
-
-
-Overfull \hbox (15.6233pt too wide) detected at line 140
-[][][] []
- []
-
-[9]) (./calibration.tex [10]) (./coding_basics.tex [11] [12]
-Missing character: There is no â in font cmr10!
-Missing character: There is no † in font cmr10!
-Missing character: There is no µ in font cmr10!
-
-Overfull \hbox (7.70695pt too wide) in paragraph at lines 71--72
-\OT1/cmr/m/n/10.95 com-pli-a-tion. Trade-o be-tween com-pile time and run-time.
- Also, use \OT1/cmr/m/it/10.95 ftemplate- depth=200000
- []
-
-[13]
-Overfull \hbox (17.29451pt too wide) in paragraph at lines 101--102
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (111.79433pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
+][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (23.5945pt too wide) in paragraph at lines 130--131
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][] 
- []
-
-[14]
-Overfull \hbox (10.99452pt too wide) in paragraph at lines 154--155
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[15] [16] [17]
-Overfull \hbox (23.5945pt too wide) in paragraph at lines 284--285
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[18]
-Overfull \hbox (23.5945pt too wide) in paragraph at lines 338--339
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
+[2]) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 18.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 18.
+ (./lc_review.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 18.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 18.
 
 
-Overfull \hbox (61.39442pt too wide) in paragraph at lines 349--350
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Package rerunfilecheck Warning: File `lc_review.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
- []
-
-) (./coding_design.tex [19] [20] [21] [22] [23] [24]
-Overfull \hbox (17.29451pt too wide) in paragraph at lines 244--245
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (61.39442pt too wide) in paragraph at lines 248--249
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (48.79445pt too wide) in paragraph at lines 249--250
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][] 
- []
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
- [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
- (./quant_review.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 17.
-Package rerunfilecheck Info: File `quant_review.out' has not changed.
-(rerunfilecheck)             Checksum: 09E88D606FE2F111F02BD2D2DF8E7EB7;2949.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
+Package rerunfilecheck Info: Checksums for `lc_review.out':
+(rerunfilecheck)             Before: EB202A94F2D842D38C8F6E35E4FFFF06;391
+(rerunfilecheck)             After:  64F154AB2E2EE5D6F68F6AEFA643564E;449.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 18.
  ) 
 Here is how much of TeX's memory you used:
- 9771 strings out of 494952
- 140660 string characters out of 6178878
- 269508 words of memory out of 5000000
- 12306 multiletter control sequences out of 15000+600000
- 14452 words of font info for 57 fonts, out of 8000000 for 9000
+ 8982 strings out of 494952
+ 129436 string characters out of 6178878
+ 263508 words of memory out of 5000000
+ 12033 multiletter control sequences out of 15000+600000
+ 13710 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,14n,60p,375b,1689s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/junyan/.texlive2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk
-></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></op
-t/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/loc
-al/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local/sh
-are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/share/t
-exmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/local/share/texmf-t
-exlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/local/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></opt/local/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></opt/local/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr9.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
-opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/lo
-cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/local/s
-hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on quant_review.pdf (25 pages, 274208 bytes).
+ 40i,11n,60p,266b,1782s stack positions out of 5000i,500n,10000p,200000b,80000s
+</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></o
+pt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/lo
+cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/local/share/texmf-t
+exlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/local/share/texmf-texlive
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/local/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmr9.pfb></opt/local/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb>
+Output written on lc_review.pdf (3 pages, 124970 bytes).
 PDF statistics:
- 1024 PDF objects out of 1200 (max. 8388607)
- 969 compressed objects within 10 object streams
- 573 named destinations out of 1000 (max. 500000)
- 329 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
