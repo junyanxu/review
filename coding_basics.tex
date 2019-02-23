@@ -2,6 +2,28 @@
 \section{Coding Basics}
 \subsection{C++}
 
+\subsubsection{Useful Function}
+
+Some useful C++ function
+
+\begin{lstlisting}
+string::append("abc")
+string::append(5, 'c')
+
+//#include<algorithm>
+vector<int> a(20, 0);
+nth_element(a.begin(), a.begin()+6, a.end()); // partition algo
+*min_element(a.begin(), a.end());
+*max_element(a.begin(), a.end());
+
+//#include<cmath>
+double i=0;
+abs(i);
+ceil(i);
+floor(i);
+\end{lstlisting}
+
+
 \subsubsection{Break String}
 A very basic thing about c++ is how to break the string using some token. Since C++11 add regex, so there are two common way of breaking strings.
 
