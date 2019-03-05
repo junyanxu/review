@@ -1,5 +1,40 @@
 \section{Chapter 5}
 
+
+\subsection{Delete A Node In BST}
+Recursive is the best, remember to devide and conquer. Keep deleteing what you copied. {\color{blue} \textbf{time complexity O(log(n)), mem O(log(n))}}
+\begin{lstlisting}
+  class Solution {
+    public:
+    TreeNode* deleteNode(TreeNode* root, int key) {
+      if(!root) return NULL;
+      if(root->val < key){
+        root->right = deleteNode(root->right, key);
+      }
+      else if(root->val > key){
+        root->left = deleteNode(root->left, key);
+      }
+      else{
+        if(!root->left || !root->right){
+          root = root->left ? root->left: root->right;
+        }
+        else{
+          auto temp = root->right;
+          while(temp->left)
+          temp = temp->left;
+          root->val = temp->val;
+          // key of the recursion
+          root->right = deleteNode(root->right, temp->val);
+        }
+      }
+      return root;
+    }
+ };
+\end{lstlisting}
+
+
+
+
 \subsection{Minimum Number of Arrows to Burst Balloons}
 Greedy Algo, very similar to merge intervals. {\color{blue}\textbf{time complexity $O(Nlog(N))$}}, {\color{blue}\textbf{space is $O(1)$}}
 
