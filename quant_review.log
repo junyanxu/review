@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  5 MAR 2019 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  5 MAR 2019 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,8 +621,8 @@ Package rerunfilecheck Info: File `quant_review.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 9812 strings out of 494952
- 141217 string characters out of 6178878
+ 9813 strings out of 494952
+ 141224 string characters out of 6178878
  266508 words of memory out of 5000000
  12324 multiletter control sequences out of 15000+600000
  14452 words of font info for 57 fonts, out of 8000000 for 9000
@@ -645,10 +645,10 @@ pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
 opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/lo
 cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/local/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on quant_review.pdf (26 pages, 279033 bytes).
+Output written on quant_review.pdf (26 pages, 279053 bytes).
 PDF statistics:
- 1068 PDF objects out of 1200 (max. 8388607)
- 1011 compressed objects within 11 object streams
- 596 named destinations out of 1000 (max. 500000)
+ 1069 PDF objects out of 1200 (max. 8388607)
+ 1012 compressed objects within 11 object streams
+ 597 named destinations out of 1000 (max. 500000)
  353 words of extra memory for PDF output out of 10000 (max. 10000000)
 
