@@ -168,3 +168,23 @@ For example when $i > k$:
 \end{equation}
 
 LMM framework has provided stochastic vol forward rate model a good interface to combine.
+
+
+\subsection{PRDC (Power Reversal Dual Callable)}
+
+In fact, a product called PRDC can be introduced to be modeled by the rates model above. Investor swap USD for JPY with banks. Therefore, investor can continully get JPY yield and have a USD call, JPY put with bank. Normally this kind of contract occur in second year, and in first year, bank has the option to cancel the contract (In order to compensate the callable, bank will pay investor a big coupon at the begining).
+\begin{center}
+\includegraphics[width=0.5\textwidth]{pictures/PRDC.png}
+\end{center}
+In fact, the investor of JPY is hopping
+\begin{enumerate}
+   \item USD can go strong (investor get more JPY)
+   \item $r_{jpy}$ go strong (investor receive more coupon)
+   \item $r_{usd}$ go weak (investor pay less coupon)
+
+The math formular of this product is ($FX = USD/JPY$)
+\begin{equation}
+  PNL_t = max(0, \frac{FX_t}{FX_0}r_f - r_d)
+\end{equation}
+
+\end{enumerate}
