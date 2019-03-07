@@ -17,7 +17,7 @@
 \BOOKMARK [3][-]{subsubsection.3.2.3}{Price A Claim Using Terminal Bond Measure}{subsection.3.2}% 17
 \BOOKMARK [2][-]{subsection.3.3}{Some Important Difference Between LMM and HJM}{section.3}% 18
 \BOOKMARK [2][-]{subsection.3.4}{SABR Model and LMM}{section.3}% 19
-\BOOKMARK [2][-]{subsection.3.5}{PRDC \(Power Reversal Dual Callable\)}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.5}{PRDC \(Power Reversal Dual Callable\) Swap}{section.3}% 20
 \BOOKMARK [1][-]{section.4}{Real Data Calibration}{}% 21
 \BOOKMARK [2][-]{subsection.4.1}{LMM}{section.4}% 22
 \BOOKMARK [1][-]{section.5}{Coding Basics}{}% 23

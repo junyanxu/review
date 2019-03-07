@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  6 MAR 2019 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_4) (preloaded format=pdflatex 2016.4.6)  7 MAR 2019 08:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,7 +624,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 17.
 Package rerunfilecheck Info: File `quant_review.out' has not changed.
-(rerunfilecheck)             Checksum: 39F274001279A9C49A887CB26606CCB1;3274.
+(rerunfilecheck)             Checksum: EF09B56E6D45BC1CBA40690F80B89FBF;3279.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
@@ -652,7 +652,7 @@ pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
 opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/lo
 cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/local/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on quant_review.pdf (27 pages, 296263 bytes).
+Output written on quant_review.pdf (27 pages, 296215 bytes).
 PDF statistics:
  1086 PDF objects out of 1200 (max. 8388607)
  1026 compressed objects within 11 object streams

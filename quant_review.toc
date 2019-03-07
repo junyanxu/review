@@ -17,7 +17,7 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Price A Claim Using Terminal Bond Measure}{9}{subsubsection.3.2.3}
 \contentsline {subsection}{\numberline {3.3}Some Important Difference Between LMM and HJM}{10}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}SABR Model and LMM}{10}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}PRDC (Power Reversal Dual Callable)}{11}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}PRDC (Power Reversal Dual Callable) Swap}{11}{subsection.3.5}
 \contentsline {section}{\numberline {4}Real Data Calibration}{12}{section.4}
 \contentsline {subsection}{\numberline {4.1}LMM}{12}{subsection.4.1}
 \contentsline {section}{\numberline {5}Coding Basics}{13}{section.5}
