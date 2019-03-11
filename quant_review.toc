@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {2.4}Use T Measure To Price Option}{6}{subsection.2.4}
 \contentsline {section}{\numberline {3}Short Rate Models}{7}{section.3}
 \contentsline {subsection}{\numberline {3.1}Overview}{7}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Ho Lee Model}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Ho-Lee Model}{7}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Vasicek Model}{7}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Hull-White Model}{7}{subsection.3.4}
 \contentsline {section}{\numberline {4}HJM and LMM}{8}{section.4}
