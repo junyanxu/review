@@ -7,39 +7,44 @@
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Change of Numeraire}{subsection.2.2}% 7
 \BOOKMARK [2][-]{subsection.2.3}{Normal Based T Measure}{section.2}% 8
 \BOOKMARK [2][-]{subsection.2.4}{Use T Measure To Price Option}{section.2}% 9
-\BOOKMARK [1][-]{section.3}{HJM and LMM}{}% 10
-\BOOKMARK [2][-]{subsection.3.1}{HJM Framework}{section.3}% 11
-\BOOKMARK [3][-]{subsubsection.3.1.1}{No Arbitrage Condition}{subsection.3.1}% 12
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Some Important Feature}{subsection.3.1}% 13
-\BOOKMARK [2][-]{subsection.3.2}{LMM Framework}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Forward Payment Replicate}{subsection.3.2}% 15
-\BOOKMARK [3][-]{subsubsection.3.2.2}{B\(t, T+\) Measure Pricing Example \(T measure\)}{subsection.3.2}% 16
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Price A Claim Using Terminal Bond Measure}{subsection.3.2}% 17
-\BOOKMARK [2][-]{subsection.3.3}{Some Important Difference Between LMM and HJM}{section.3}% 18
-\BOOKMARK [2][-]{subsection.3.4}{SABR Model and LMM}{section.3}% 19
-\BOOKMARK [2][-]{subsection.3.5}{PRDC \(Power Reversal Dual Callable\) Swap}{section.3}% 20
-\BOOKMARK [1][-]{section.4}{Real Data Calibration}{}% 21
-\BOOKMARK [2][-]{subsection.4.1}{LMM}{section.4}% 22
-\BOOKMARK [1][-]{section.5}{Coding Basics}{}% 23
-\BOOKMARK [2][-]{subsection.5.1}{C++}{section.5}% 24
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Useful Function}{subsection.5.1}% 25
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Break String}{subsection.5.1}% 26
-\BOOKMARK [3][-]{subsubsection.5.1.3}{Template}{subsection.5.1}% 27
-\BOOKMARK [3][-]{subsubsection.5.1.4}{Compiled Time Calculation}{subsection.5.1}% 28
-\BOOKMARK [3][-]{subsubsection.5.1.5}{Variadic Template}{subsection.5.1}% 29
-\BOOKMARK [3][-]{subsubsection.5.1.6}{Static Polymorphism \(CRTP\)}{subsection.5.1}% 30
-\BOOKMARK [3][-]{subsubsection.5.1.7}{Perfect Forwarding}{subsection.5.1}% 31
-\BOOKMARK [3][-]{subsubsection.5.1.8}{Smart Pointer}{subsection.5.1}% 32
-\BOOKMARK [2][-]{subsection.5.2}{Java}{section.5}% 33
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Pass by Value}{subsection.5.2}% 34
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Producer And Consumer}{subsection.5.2}% 35
-\BOOKMARK [2][-]{subsection.5.3}{Python}{section.5}% 36
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Dataframe Data-structure}{subsection.5.3}% 37
-\BOOKMARK [2][-]{subsection.5.4}{MongoDB}{section.5}% 38
-\BOOKMARK [1][-]{section.6}{Coding Design}{}% 39
-\BOOKMARK [2][-]{subsection.6.1}{SOLID Principles}{section.6}% 40
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Single Responsible principle}{subsection.6.1}% 41
-\BOOKMARK [3][-]{subsubsection.6.1.2}{Open/Close principle}{subsection.6.1}% 42
-\BOOKMARK [3][-]{subsubsection.6.1.3}{Liskov Substitution principle}{subsection.6.1}% 43
-\BOOKMARK [3][-]{subsubsection.6.1.4}{Interface Segregation Principle}{subsection.6.1}% 44
-\BOOKMARK [3][-]{subsubsection.6.1.5}{Dependency Inversion Principle}{subsection.6.1}% 45
+\BOOKMARK [1][-]{section.3}{Short Rate Models}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Overview}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Ho Lee Model}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Vasicek Model}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Hull-White Model}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{HJM and LMM}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{HJM Framework}{section.4}% 16
+\BOOKMARK [3][-]{subsubsection.4.1.1}{No Arbitrage Condition}{subsection.4.1}% 17
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Some Important Feature}{subsection.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.2}{LMM Framework}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Forward Payment Replicate}{subsection.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.2}{B\(t, T+\) Measure Pricing Example \(T measure\)}{subsection.4.2}% 21
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Price A Claim Using Terminal Bond Measure}{subsection.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.3}{Some Important Difference Between LMM and HJM}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.4}{SABR Model and LMM}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.5}{PRDC \(Power Reversal Dual Callable\) Swap}{section.4}% 25
+\BOOKMARK [1][-]{section.5}{Real Data Calibration}{}% 26
+\BOOKMARK [2][-]{subsection.5.1}{LMM}{section.5}% 27
+\BOOKMARK [1][-]{section.6}{Coding Basics}{}% 28
+\BOOKMARK [2][-]{subsection.6.1}{C++}{section.6}% 29
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Useful Function}{subsection.6.1}% 30
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Break String}{subsection.6.1}% 31
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Template}{subsection.6.1}% 32
+\BOOKMARK [3][-]{subsubsection.6.1.4}{Compiled Time Calculation}{subsection.6.1}% 33
+\BOOKMARK [3][-]{subsubsection.6.1.5}{Variadic Template}{subsection.6.1}% 34
+\BOOKMARK [3][-]{subsubsection.6.1.6}{Static Polymorphism \(CRTP\)}{subsection.6.1}% 35
+\BOOKMARK [3][-]{subsubsection.6.1.7}{Perfect Forwarding}{subsection.6.1}% 36
+\BOOKMARK [3][-]{subsubsection.6.1.8}{Smart Pointer}{subsection.6.1}% 37
+\BOOKMARK [2][-]{subsection.6.2}{Java}{section.6}% 38
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Pass by Value}{subsection.6.2}% 39
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Producer And Consumer}{subsection.6.2}% 40
+\BOOKMARK [2][-]{subsection.6.3}{Python}{section.6}% 41
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Dataframe Data-structure}{subsection.6.3}% 42
+\BOOKMARK [2][-]{subsection.6.4}{MongoDB}{section.6}% 43
+\BOOKMARK [1][-]{section.7}{Coding Design}{}% 44
+\BOOKMARK [2][-]{subsection.7.1}{SOLID Principles}{section.7}% 45
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Single Responsible principle}{subsection.7.1}% 46
+\BOOKMARK [3][-]{subsubsection.7.1.2}{Open/Close principle}{subsection.7.1}% 47
+\BOOKMARK [3][-]{subsubsection.7.1.3}{Liskov Substitution principle}{subsection.7.1}% 48
+\BOOKMARK [3][-]{subsubsection.7.1.4}{Interface Segregation Principle}{subsection.7.1}% 49
+\BOOKMARK [3][-]{subsubsection.7.1.5}{Dependency Inversion Principle}{subsection.7.1}% 50

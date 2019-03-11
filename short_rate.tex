@@ -1,0 +1,53 @@
+\newpage
+\section{Short Rate Models}
+\subsection{Overview}
+HJM framework, Vasicek etc are all short rate. The only assumption we have about the discount is how the instaneous discount evolve at the time of observation in the future.
+
+\subsection{Ho Lee Model}
+The formula of Ho-Lee model is
+\begin{equation}
+dr = \lambda_t dt + \sigma dW_t
+\end{equation}
+This gives you:
+\begin{enumerate}
+\item upward trend of discount curve
+\item constant volatility (total sum of var over time)
+\end{enumerate}
+
+
+\subsection{Vasicek Model}
+The formula of Vasicek model is
+\begin{equation}
+dr = \kappa (\theta - r) dt + \sigma dW_t
+\end{equation}
+This gives you:
+\begin{enumerate}
+\item upward trend of discount curve (with limit)
+\item constant limit {\color{red}sum} volatility (decreasing volatility over time)
+\end{enumerate}
+
+
+
+\subsection{Hull-White Model}
+HW steals the idea of Vasicek at the glance
+\begin{equation}
+dr = (\theta(t) - \alpha(t)r) dt + \sigma(t) dW_t
+\end{equation}
+This gives you:
+\begin{enumerate}
+\item more flexible vasicek model
+\end{enumerate}
+
+A pretty useful variation of HW model is adding factor to $\theta(t)$. Then We get two-factor Hull-White model.
+\begin{equation}
+\begin{aligned}
+dr &= (\theta(t) - \alpha(t)r + u) dt + \sigma_1(t) dW^1_t \\
+du &= -\beta(t) u dt + \sigma_2(t) dW^1_t \\
+& <dW^1, dW^2> = \rho dt
+\end{aligned}
+\end{equation}
+
+This gives you:
+\begin{enumerate}
+\item An term structure of theta plus with {\color{red} \textbf{variance decomposition}} (related to PCA of term structure)
+\end{enumerate}
