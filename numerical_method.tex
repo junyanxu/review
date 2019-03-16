@@ -58,3 +58,26 @@ Local truncation error $L(x,t) = O(\Delta t)^2 + O(\Delta x)^2$. The stable cond
 
 
 \subsection{Monte-Carlo}
+\subsubsection{Integration}
+We can use monte-carlo for integration. Just find a density map $p(x)$
+\begin{equation}
+\begin{aligned}
+ \int_\Omega f(x) dx &= E \frac{f(x)}{p(x)} p(x) dx \\
+ \int_\Omega p(x) dx &= 1
+\end{aligned}
+\end{equation}
+
+\subsubsection{Ways to Reduce Variance}
+\begin{enumerate}
+\item Antithetic way
+\item Control variable $\hat{X} += Y - \hat{Y}$
+\item Importance Sample $\frac{h(x)f(x)}{g(x)}$ reduce $E(h(x)^2)$
+\end{enumerate}
+
+\subsubsection{Longstaff-Schwartz}
+\begin{enumerate}
+\item generate N path using random (np.random.randn(N, T))
+\item backward for loop, each t look at the result of t+1, group the payoff by state that you define (S stock price in the simple case).
+\item do the regression (Y is payoff X is state) and see if the intrinsic value is better than the expected future payoff of the current state.
+\item get the current state decision and payoff
+\end{enumerate}

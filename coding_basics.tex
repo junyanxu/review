@@ -338,6 +338,112 @@ public class Main {
 
 
 \subsection{Python}
+
+\subsubsection{Meta Class}
+A metaclass is a class whose instances are classes. Like an "ordinary" class defines the behavior of the instances of the class, a metaclass defines the behavior of classes and their instances.
+
+You can think of metaclass as a dispatcher when creating a new class in Python. New class will have customize
+attributes after metaclass's operation.
+
+type will provide a mapping from text code to real class type that we defined,
+
+In python, default meta class is type.
+\begin{lstlisting}
+class LittleMeta(type):
+    def __new__(cls, clsname, superclasses, attributedict):
+        print "LittleMeta.__new__ called"
+        # return a instance of LittleMeta, which is A
+        return type.__new__(cls, clsname, superclasses, attributedict)
+
+    def __call__(cls, *args,**kwargs):
+        # pass class A in here as a argument
+        print('MetaFoo: {c},{a},{k}'.format(c=cls,a=args,k=kwargs))
+
+        # invoke normal A initailize process
+        return super(LittleMeta, cls).__call__(*args, **kwargs)
+
+
+class S(object):
+    pass
+
+class A(S):
+    __metaclass__ = LittleMeta
+
+    def __new__(cls):
+        print "A.__new__ called"
+        return super(A, cls).__new__(cls)
+    pass
+
+a = A()
+print a
+\end{lstlisting}
+
+you will get
+\begin{lstlisting}
+clsname:  A
+superclasses:  (<class '__main__.S'>,)
+attributedict:  {'__module__': '__main__', '__qualname__': 'A'}
+\end{lstlisting}
+
+The singleton in python can be done by
+\begin{lstlisting}
+class Singleton(type):
+  _instances = {}
+  def __call__(cls, *args, **kwargs):
+      if cls not in cls._instances:
+          cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+      return cls._instances[cls]
+\end{lstlisting}
+
+
+\subsubsection{\_\_new\_\_ vs \_\_init\_\_}
+\_\_new\_\_(cls) method in python is for creating object, which is called before the \_\_init\_\_. \_\_new\_\_ is supposed to return a obj of current class if you want to let \_\_init\_\_ get called.
+\begin{lstlisting}
+class A(object):
+
+    def __new__(cls):
+        print "A.__new__ called"
+
+    def __init__(self):
+        print "A.__init__ called"  # -> is actually never called
+
+print A()
+\end{lstlisting}
+
+If we change a bit, then both method would get called
+\begin{lstlisting}
+class A(object):
+
+    def __new__(cls):
+        print "A.__new__ called"
+        obj = super(A, cls).__new__(cls)
+        return obj
+
+    def __init__(self):
+        print "A.__init__ called"  # -> is actually never called
+
+print A()
+\end{lstlisting}
+
+\subsubsection{Abstract Class In Python}
+Now we understand why when we create abstract base class in Python, we need do the following
+\begin{lstlisting}
+
+from ABC import ABCmeta
+
+class abstract(object):
+    # ABCmeta here has changed the default behavior of string->class
+    # mapping So you cannot create a instance of abstract, since it
+    # will raise error at the above step
+    __metaclass__ = ABCmeta
+
+    @abstractmethod
+    def foo(self)
+
+\end{lstlisting}
+
+
+
 \subsubsection{Dataframe Data-structure}
 \begin{enumerate}
 \item pandas.DataFrame is a column major data structure, each colume is a pd.Series (act as a dictionary plus ndarray).
