@@ -189,3 +189,35 @@ The using the similar technique as for second part proof we can get the expressi
 S(0) N(d_1)
 \end{aligned}
 \end{equation}
+
+
+\subsection{Application On Financial Instruments}
+\subsubsection{Caplets}
+As we know that caplets means have an option to enter a borrowing contract at rate $K$ from $T$ to $T + \tau$.
+
+Under the $T$ measure, let F to be forward rate from $T$ to $T + \tau$ we have
+\begin{equation}
+\begin{aligned}
+\frac{V_0}{P(0, T+\tau)} = \tau E^{T + \tau}(F(T) - K)^+
+\end{aligned}
+\end{equation}
+Then we have {\color{red} F is normal here, not log-normal, similar to swaption}
+\begin{equation}
+\begin{aligned}
+V_0= P(0, T + \tau)\tau \xi^N_{call}(F(T), K, T, \sigma)
+\end{aligned}
+\end{equation}
+
+
+\subsubsection{Swaptions}
+As we know that swaptions means have an option to enter a swap contract at rate $K$ from $T$ to $T + \tau$.
+
+Assume par rate is $C(t, T, T+\tau)$. Then forward contract has the price $(K - C)A(t, T, T + \tau)$. A is the risk annuity.
+
+Under this risk annuity measure, C is easy to show it's martingale. For rate, it should be normal distributed.
+Then we have
+\begin{equation}
+\begin{aligned}
+V_0= A(0,T, T + \tau) \xi^N_{put}(C(T), K, T, \sigma)
+\end{aligned}
+\end{equation}
