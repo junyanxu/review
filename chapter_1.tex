@@ -1,1 +1,17 @@
-\section{Chapter 1}
+\section{Important Algorithm}
+
+Before the solution, here are some summary of common graph algorithms
+
+\subsection{A Star Algorithm}
+
+The key idea is to always get minimum
+
+\begin{equation}
+  k(n) = g(n) + f(n)
+\end{equation}
+
+as searching start
+
+If $f(n) \leq \tilde{f}(n)$, then the $f(n)$ is admissive, and the searching result is guaranteed to be smallest. Dijstra is a special case for A* algorithm where $f(n) = 0$
+
+Use a tree set as a priority queue for getting next.
